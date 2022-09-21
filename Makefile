@@ -1,6 +1,6 @@
 NAME = libft
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -fsanitize=adress -g
 SRCS = #poner los .c
 OBJS = ${SRCS:.c=.o}
 RM = rm -rf
