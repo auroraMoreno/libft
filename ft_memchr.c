@@ -1,33 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 19:21:56 by marvin            #+#    #+#             */
-/*   Updated: 2022/09/23 19:21:56 by marvin           ###   ########.fr       */
+/*   Created: 2022/09/23 19:21:28 by marvin            #+#    #+#             */
+/*   Updated: 2022/09/23 19:21:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-//#include <stdio.h>
-//#include <string.h>
-char *ft_strchr(const char *s, int c)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	char *aux = (char *)s;
-	while(*aux != c)
-	{
-		if(*aux == '\0')
-		{
-			return (0);
-		}
-		aux++;
-	}
-	return (aux);
+
 }
-
-/*int main(void)
-{
-	printf("%s", ft_strchr("hola", 'i'));
-	printf("%s", strchr("hola", 'i'));
-}*/
