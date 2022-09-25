@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 19:22:13 by marvin            #+#    #+#             */
-/*   Updated: 2022/09/23 19:22:13 by marvin           ###   ########.fr       */
+/*   Created: 2022/09/25 10:39:24 by aumoreno          #+#    #+#             */
+/*   Updated: 2022/09/25 10:39:24 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     
     return (0);
 }
-
+/*
 int main(void)
 {
     printf("%d", ft_strncmp("hola que tal", "hola que haces", 7));
     printf("%d", strncmp("hola que tal", "hola que haces", 7));
 }
+*/

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 19:21:28 by marvin            #+#    #+#             */
-/*   Updated: 2022/09/23 19:21:28 by marvin           ###   ########.fr       */
+/*   Created: 2022/09/25 10:40:31 by aumoreno          #+#    #+#             */
+/*   Updated: 2022/09/25 10:40:31 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 #include <string.h>
 #include <stdio.h>

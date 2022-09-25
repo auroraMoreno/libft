@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 10:41:16 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/09/25 10:41:16 by aumoreno         ###   ########.fr       */
+/*   Created: 2022/09/25 10:41:43 by aumoreno          #+#    #+#             */
+/*   Updated: 2022/09/25 10:41:43 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
-int ft_isalpha(int c)
+void ft_bzero(void *s, size_t n)
 {
-    if((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-    {
-        return (1);
-    }
-
-    return (0);
+    ft_memset(s, '\0', n);
 }
-/*
-int main(void)
-{
-    printf("%d", isalpha('4'));
-}
-*/

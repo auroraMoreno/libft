@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 10:41:16 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/09/25 10:41:16 by aumoreno         ###   ########.fr       */
+/*   Created: 2022/09/25 10:39:38 by aumoreno          #+#    #+#             */
+/*   Updated: 2022/09/25 10:39:38 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-
-int ft_isalpha(int c)
+unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-    if((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+    unsigned int i;
+    unsigned int c;
+
+    i = 0;
+    c = 0;
+    
+    while(src[c])
+        c++;
+    if(size < 1)
+        return (c);
+    while (src[i] && i < size - 1)
     {
-        return (1);
+        dest[i] = src[i];
+        i++;
     }
-
-    return (0);
+    dest[i] = '\0';
+    return(c);    
 }
-/*
-int main(void)
-{
-    printf("%d", isalpha('4'));
-}
-*/

@@ -3,23 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/17 19:15:00 by marvin            #+#    #+#             */
-/*   Updated: 2022/09/17 19:15:00 by marvin           ###   ########.fr       */
+/*   Created: 2022/09/25 10:41:28 by aumoreno          #+#    #+#             */
+/*   Updated: 2022/09/25 10:41:28 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
-
-int ft_isdigit(int c)
-{
-    if(c >= '0' && c <= '9')
-        return (1);
-    
-    return (0);
-}
 
 int ft_isalnum(int c)
 {
