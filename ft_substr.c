@@ -6,7 +6,7 @@
 /*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 13:19:13 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/12/31 13:28:17 by aumoreno         ###   ########.fr       */
+/*   Updated: 2022/12/31 13:33:43 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,11 @@ size_t len)
 	substr[i] = 0;
 	return (substr);
 }
-
+/*
 int main(void){
 	
 	char *st = ft_substr("hola que tal", 2, 5);
 	printf("%s", st);
 	free(st);
 }
+*/
