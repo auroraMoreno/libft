@@ -6,12 +6,12 @@
 /*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 10:38:17 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/12/31 10:58:37 by aumoreno         ###   ########.fr       */
+/*   Updated: 2022/12/31 13:01:41 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int ft_isalpha(int c);
 
@@ -23,7 +23,7 @@ int ft_isascii(int c);
 
 int ft_isprint(int c);
 
-int ft_strlen(const char *s);
+size_t ft_strlen(const char *s);
 
 void *ft_memset(void *str, int c, size_t n);
 
@@ -57,7 +57,6 @@ char *ft_strnstr(const char	*big, const char *little, size_t len);
 
 int ft_atoi(const char *str);
 
-char *ft_substr(char const *s, unsigned int start,
-size_t len);
+
 
 

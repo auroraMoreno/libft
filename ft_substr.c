@@ -6,11 +6,11 @@
 /*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 13:19:13 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/12/31 11:03:15 by aumoreno         ###   ########.fr       */
+/*   Updated: 2022/12/31 13:28:17 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+
 
 /*
 s: The string from which to create the substring.
@@ -28,22 +28,47 @@ s=> el string inicial
 start=> el entero que indica en que letra empezar 
 len => cuantas letras tiene que cortar 
 
+PSEUDOCODIGO
+-comprobar que s tiene contenido 
+	si no returrn 0
+-iniciar el contador a 0 
+
 */
+
+#include "libft.h"
+
 
 char *ft_substr(char const *s, unsigned int start,
 size_t len)
 {
-	void *substr;
-	substr = (char *) malloc(3 * sizeof(len));
-	while(len >= 0){
-		substr = ft_strchr(s, start);
+	char *substr;
+	size_t i;
+	//start = (size_t)start;
+	size_t frm;
+	if(!s)
+		return(0);
+	
+	frm = start;
+	i = 0;
+	while(i < len && s[frm++]){
+		i++;
 	}
-	return substr;
+	substr = (char *) malloc(i + 1);
+	i = 0;
+	frm = start;
+	if(!substr){
+		return(0);
+	}
+	while(i < len && frm < ft_strlen(s)){
+		substr[i++] = s[frm++];
+	}
+	substr[i] = 0;
+	return (substr);
 }
 
 int main(void){
 	
-	char *s = ft_substr("hola que tal", 2, 5);
-	printf("%s",s);
-	free(s);
+	char *st = ft_substr("hola que tal", 2, 5);
+	printf("%s", st);
+	free(st);
 }
