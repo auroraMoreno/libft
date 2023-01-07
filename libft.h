@@ -6,12 +6,12 @@
 /*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 10:38:17 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/12/31 13:32:27 by aumoreno         ###   ########.fr       */
+/*   Updated: 2023/01/07 08:08:10 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+# include <stdio.h>
+# include <stdlib.h>
 
 int ft_isalpha(int c);
 
@@ -60,6 +60,7 @@ int ft_atoi(const char *str);
 char *ft_substr(char const *s, unsigned int start,
 size_t len);
 
+char *ft_strjoin(char const *s1, char const *s2);
 
 
 

@@ -6,7 +6,7 @@
 /*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 13:19:13 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/12/31 13:33:43 by aumoreno         ###   ########.fr       */
+/*   Updated: 2023/01/07 07:45:20 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ PSEUDOCODIGO
 */
 
 #include "libft.h"
-
 
 char *ft_substr(char const *s, unsigned int start,
 size_t len)
