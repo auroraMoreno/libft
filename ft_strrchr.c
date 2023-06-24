@@ -6,7 +6,7 @@
 /*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 10:39:14 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/12/31 12:06:30 by aumoreno         ###   ########.fr       */
+/*   Updated: 2023/06/24 14:21:01 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*aux;
-	int			len;
+	const char	*innit;
+	char		ctr;
 
-	aux = s;
-	len = ft_strlen(aux);
-	s += len;
-	while (s != aux && c != *s)
+	innit = s;
+	ctr = c;
+	while (*s)
+		s++;
+	while (*s != ctr)
+	{
+		if (s == innit)
+			return (0);
 		s--;
-	if ((unsigned char)c == (unsigned char)*s)
-		return ((char *)s);
-	return (0);
+	}
+	return ((char *) s);
 }

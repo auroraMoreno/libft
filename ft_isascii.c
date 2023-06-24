@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 10:41:08 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/09/25 10:41:08 by aumoreno         ###   ########.fr       */
+/*   Updated: 2023/06/24 11:57:34 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (0 >= c && c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

@@ -21,14 +21,14 @@ int	ft_count_words(char const *s, char c)
 	words = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == c || s[i] == '\0')
 			i++;
 		else if (s[i] < 32 || s[i] > 126)
 			return (0);
 		else
 		{
 			words++;
-			while (s[i] && s[i] != c)
+			while (s[i] && s[i] != c && s[i] != '\0')
 				i++;
 		}
 	}
@@ -72,6 +72,7 @@ int	ft_copy_word(char const *s, char c, char **result)
 			result[++j] = (char *)malloc(sizeof(*s) * (len + 1));
 			if (!result[j])
 				return (ft_free(j, result));
+			result[j][len] = '\0';
 		}
 	}
 	return (1);
@@ -111,7 +112,7 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	int		words;
 
-	if (s == NULL || c == '\0')
+	if (s == NULL)
 		return (0);
 	words = ft_count_words(s, c);
 	result = (char **)malloc((words + 1) * sizeof(char *));

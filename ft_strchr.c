@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 10:39:52 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/09/25 10:39:52 by aumoreno         ###   ########.fr       */
+/*   Updated: 2023/06/24 13:08:59 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strchr(const char *s, int c)
 	char	*aux;
 
 	aux = (char *)s;
-	while (*aux != c)
+	while (*aux != (char)c)
 	{
 		if (*aux == '\0')
 		{

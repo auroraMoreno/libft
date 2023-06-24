@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 13:19:13 by aumoreno          #+#    #+#             */
-/*   Updated: 2023/06/24 09:52:08 by aumoreno         ###   ########.fr       */
+/*   Updated: 2023/06/24 14:11:44 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,22 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	size_t	i;
-	size_t	frm;
 
 	if (!s)
 		return (0);
-	frm = start;
-	i = 0;
-	while (i < len && s[frm++])
+	if (start > ft_strlen(s))
 	{
-		i++;
+		substr = ft_calloc(1, 1);
+		return (substr);
 	}
-	substr = (char *) malloc(i + 1);
-	i = 0;
-	frm = start;
+	if (ft_strlen(s) - start < len)
+		len = ft_strlen(s) - start;
+	substr = ft_calloc((len + 1), 1);
 	if (!substr)
-	{
 		return (0);
-	}
-	while (i < len && frm < ft_strlen(s))
+	if (ft_strlen(s) > (size_t)start)
 	{
-		substr[i++] = s[frm++];
+		ft_strlcpy(substr, (char *)(s + start), len + 1);
 	}
-	substr[i] = 0;
 	return (substr);
 }

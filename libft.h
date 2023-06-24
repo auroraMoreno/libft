@@ -6,7 +6,7 @@
 /*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 10:38:17 by aumoreno          #+#    #+#             */
-/*   Updated: 2023/01/07 11:56:26 by aumoreno         ###   ########.fr       */
+/*   Updated: 2023/06/24 11:49:36 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <stdio.h>
+# include <unistd.h>
 
 int				ft_isalpha(int c);
 
@@ -26,7 +27,7 @@ int				ft_isascii(int c);
 
 int				ft_isprint(int c);
 
-int				ft_strlen(const char *s);
+size_t			ft_strlen(const char *s);
 
 void			*ft_memset(void *str, int c, size_t n);
 

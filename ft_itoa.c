@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 20:46:23 by aumoreno          #+#    #+#             */
-/*   Updated: 2023/06/24 10:07:56 by aumoreno         ###   ########.fr       */
+/*   Updated: 2023/06/24 13:00:53 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ int	len(long nb)
 	int	lgth;
 
 	lgth = 0;
+	if (nb == 0)
+	{
+		return (1);
+	}
 	if (nb < 0)
 	{
 		nb = nb * -1;
@@ -55,7 +59,7 @@ char	*ft_itoa(int n)
 	str[l--] = '\0';
 	if (nb == 0)
 	{
-		str[0] = 48;
+		str[0] = '0';
 		return (str);
 	}
 	if (nb < 0)
