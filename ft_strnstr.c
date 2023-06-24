@@ -11,18 +11,19 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-char *ft_strnstr(const char	*big, const char *little, size_t len)
-{
-    size_t mem; 
 
-    if(*little == '\0')
-        return((char *)big);
-    mem = ft_strlen((char *)little);
-    while(*big != '\0' && len-- >= mem)
-    {
-        if(*big == *little && ft_memcmp(big, little, mem) == 0)
-            return ((char *)big);
-        big++;
-    }
-    return (0);
+char	*ft_strnstr(const char	*big, const char *little, size_t len)
+{
+	size_t	mem;
+
+	if (*little == '\0')
+		return ((char *)big);
+	mem = ft_strlen((char *)little);
+	while (*big != '\0' && len-- >= mem)
+	{
+		if (*big == *little && ft_memcmp(big, little, mem) == 0)
+			return ((char *)big);
+		big++;
+	}
+	return (0);
 }

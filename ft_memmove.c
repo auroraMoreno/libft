@@ -11,12 +11,11 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	char *tmp;
-	char *d;
+	char	*tmp;
+	char	*d;
 
 	tmp = (char *)src;
 	d = (char *)dst;

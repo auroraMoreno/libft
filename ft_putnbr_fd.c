@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 10:56:31 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/09/25 10:56:31 by aumoreno         ###   ########.fr       */
+/*   Created: 2023/04/19 20:34:52 by aumoreno          #+#    #+#             */
+/*   Updated: 2023/04/19 20:34:52 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h";
 
-char	*ft_strdup(const char *s1)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*s_dup;
-
-	s_dup = (char *)malloc(ft_strlen(s1) + 1);
-	if (!s_dup)
-		return (0);
-	ft_memcpy (s_dup, s1, ft_strlen(s1) + 1);
-	return (s_dup);
+	if (n == -2147483648)
+	{
+		ft_putstr_fd ("-2147483648", fd);
+	}
+	else
+	{
+		if (n < 0)
+		{
+			ft_putstr_fd ("-", fd);
+			n = n * -1;
+		}
+		else if (n >= 9)
+		{
+			ft_putnbr_fd (n, fd);
+			n = n / 10;
+			ft_putnbr_fd (n % 10, fd);
+		}
+	}
 }

@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 10:56:31 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/09/25 10:56:31 by aumoreno         ###   ########.fr       */
+/*   Created: 2023/04/05 10:42:00 by aumoreno          #+#    #+#             */
+/*   Updated: 2023/04/05 10:42:00 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*s_dup;
+	char			*r;
+	size_t			len;
+	unsigned int	i;
 
-	s_dup = (char *)malloc(ft_strlen(s1) + 1);
-	if (!s_dup)
-		return (0);
-	ft_memcpy (s_dup, s1, ft_strlen(s1) + 1);
-	return (s_dup);
+	if (s == NULL || f == NULL)
+	{
+		return (NULL);
+	}
+	len = ft_strlen(s);
+	r = (char *)malloc(len + 1);
+	if (r == NULL)
+	{
+		return (NULL);
+	}
+	i = 0;
+	while (s[i] != '\0')
+	{
+		r[i] = f(i, s[i]);
+		i++;
+	}
+	r[len] = '\0';
+	return (r);
 }

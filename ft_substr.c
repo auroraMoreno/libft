@@ -1,24 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 10:56:31 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/09/25 10:56:31 by aumoreno         ###   ########.fr       */
+/*   Created: 2022/12/28 13:19:13 by aumoreno          #+#    #+#             */
+/*   Updated: 2023/06/24 09:52:08 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*s_dup;
+	char	*substr;
+	size_t	i;
+	size_t	frm;
 
-	s_dup = (char *)malloc(ft_strlen(s1) + 1);
-	if (!s_dup)
+	if (!s)
 		return (0);
-	ft_memcpy (s_dup, s1, ft_strlen(s1) + 1);
-	return (s_dup);
+	frm = start;
+	i = 0;
+	while (i < len && s[frm++])
+	{
+		i++;
+	}
+	substr = (char *) malloc(i + 1);
+	i = 0;
+	frm = start;
+	if (!substr)
+	{
+		return (0);
+	}
+	while (i < len && frm < ft_strlen(s))
+	{
+		substr[i++] = s[frm++];
+	}
+	substr[i] = 0;
+	return (substr);
 }

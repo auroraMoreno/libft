@@ -6,20 +6,15 @@
 /*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 10:38:52 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/09/25 10:38:52 by aumoreno         ###   ########.fr       */
+/*   Updated: 2023/05/20 10:25:23 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-	c -= 32;
-	return c; 
+	if (c >= 97 && c <= 122)
+	{
+		c -= 32;
+	}
+	return (c);
 }
-
-/*int main(void)
-{
-	printf("%c",ft_toupper('a'));
-}
-*/

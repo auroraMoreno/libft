@@ -6,20 +6,15 @@
 /*   By: aumoreno <aumoreno@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 10:39:04 by aumoreno          #+#    #+#             */
-/*   Updated: 2022/09/25 10:39:04 by aumoreno         ###   ########.fr       */
+/*   Updated: 2023/05/20 10:24:35 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	c+= 32;
-	return c; 
+	if (c >= 65 && c <= 90)
+	{
+		c += 32;
+	}
+	return (c);
 }
-
-/*int main(void)
-{
-	printf("%c", ft_tolower('A'));
-}
-*/

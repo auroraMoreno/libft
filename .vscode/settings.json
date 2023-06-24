@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "libft.h": "c",
+        "ft_stri": "c"
+    }
+}
