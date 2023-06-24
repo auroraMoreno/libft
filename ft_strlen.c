@@ -6,11 +6,11 @@
 /*   By: aumoreno <aumoreno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 17:51:05 by marvin            #+#    #+#             */
-/*   Updated: 2022/09/21 16:47:40 by aumoreno         ###   ########.fr       */
+/*   Updated: 2023/01/07 07:45:17 by aumoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
